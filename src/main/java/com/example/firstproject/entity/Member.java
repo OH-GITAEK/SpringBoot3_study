@@ -10,13 +10,13 @@ import lombok.ToString;
 @Entity
 @AllArgsConstructor
 @ToString
-public class Article {
+public class Member {
     @Id
     @GeneratedValue
-    private Long id;
+    Long id;
     @Column
-    private String title;
+    String email;
     @Column
-    private String content;
+    String password;
 
 }
