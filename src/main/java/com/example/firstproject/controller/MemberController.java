@@ -86,6 +86,7 @@ public class MemberController {
         log.info("삭제 요청이 들어왔습니다!!");
 
         Member target = memberRepository.findById(id).orElse(null);
+        log.info(target.toString());
         if (target != null){
             memberRepository.delete(target);
             rttr.addFlashAttribute("msg","삭제됐습니다!");
